@@ -13,22 +13,21 @@ $(document).ready(function () {
 
   // holds button numbers that computer picks
   var buttonBird;
-  var buttonRacoon;
-  var buttonBunny;
-  var buttonPorcupine;
+  var buttonFox;
+  var buttonSquirrel;
+  var buttonMouse;
 
-  // DISPLAY
-  $('#userTotal').html(userSum);
-  $('#winCounter').html(winCounter);
-  $('#lossCounter').html(lossCounter);
+  var gamePlaying = false;
 
   // FUNCTIONS
   //-----------------
 
   // SET UP THE GAME
   function gameSet() {
+    gamePlaying = true
     // Set sum to 0
     userSum = 0;
+    $('#userTotal').html(userSum);
 
     // generate a number between 19-120 for randomNum
     randomNum = Math.floor(Math.random() * 101) + 19;
@@ -52,11 +51,11 @@ $(document).ready(function () {
 
   // CHECK END GAME
   function checkGame() {
-    var gamePlaying = false
     // if the userSum = randomNum the game is won
     if (userSum === randomNum) {
       // update win counter plus 1
       winCounter++;
+      $('#winCounter').html(winCounter);
       // update the message with 'Yay! You won! Do you want to play again?'
       $('#message').text('Yay! You won! Want to play again?');
       // update button to say 'play again?'
@@ -66,6 +65,7 @@ $(document).ready(function () {
     else if (userSum > randomNum) {
       // update lose counter plus 1
       lossCounter++;
+      $('#lossCounter').html(lossCounter);
       // update the message with 'Oh no! You lost! Would you like to try again?'
       $('#message').text('Oh no! You lost! Want to try again?');
       // update button to say 'play again'
@@ -77,11 +77,14 @@ $(document).ready(function () {
     }
   };
 
-  // BUTTON CLICKs
+  // BUTTON CLICKS
   $('#playButton').on('click', function () {
     gameSet();
   });
 
+  // FIX SO THAT YOU CAN'T CLICK ANIMAL BUTTONS UNTIL GAME IS PLAYING
+  // THERE'S GOTTA BE A WAY TO COMBINE ALL BUTTONS
+  // --------------------------------------------------
   $("#buttonFox").on("click", function () {
     // add value of button to userSum
     userSum = userSum + buttonFox;

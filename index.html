@@ -19,56 +19,54 @@
   <div class="container mybox">
     <div class="row title">
       <div class="col-md-12">
-        <h1>Animal Add 'Em Alls</h1>
+        <h1>- Animal Add Alls -</h1>
       </div>
     </div>
-
     <!-- Instructions: row 2 -->
     <div class="row">
       <div class="offset-1 col-md-10" id="instructions">
-        <h2>How to Play</h2>
+        <h4>How to Play</h4>
         <ul>
           <li>You will be given a random number at the start of each game.</li>
           <li>You have four furry friends below. When clicked each will add a specific number of points to your score.</li>
           <li>You win the game if you match your total score to the random number. You lose the game if your total
             score
             goes higher than the random number</li>
-          <li>The value held by each animal is hidden until you click on them.</li>
+          <li>The value held by each animal is hidden until clicked. Do the math and remember each value.</li>
           <li>At the start of each new game the random number and the animal values change.</li>
         </ul>
       </div>
     </div>
     <br>
-    <!-- Wins and Losses counter -->
-    <div class="row">
-      <div class="offset-1 col-md-4">
-        <h5>Wins: <span id="winCounter"></span></h5>
-        <h5>Losses: <span id="lossCounter"></span></h5>
-      </div>
+    <div class="row justify-content-center">
       <!-- message changes on win or lose / play again?-->
       <div class="col-md-6">
         <h4 id="message">The animals want to play with you!</h4>
-        <br>
-        <button id="playButton">Play Game!</button>
+        <button type="button" class="btn btn-info" id="playButton">Play Game!</button>
       </div>
     </div>
     <br>
-    <!-- Generated random number -->
-    <div class="row">
-      <div class="offset-2 col-md-4">
-        <h4>Match this number:</h4>
+    <div class="row justify-content-center">
+      <!-- Wins and Losses counter -->
+      <div class="col-md-3">
+        <h5>Wins: <span id="winCounter"></span></h5>
+        <h5>Losses: <span id="lossCounter"></span></h5>
+      </div>
+      <!-- Generated random number -->
+      <div class="col-md-3">
+        <h5>Match this number:</h5>
         <h2 id="randomNumber"></h2>
       </div>
       <!-- User's score (updates with each click) -->
-      <div class="col-md-4">
-        <h4>Your total is:</h4>
+      <div class="col-md-3">
+        <h5>Your total is:</h5>
         <h2 id="userTotal"></h2>
       </div>
     </div>
     <br>
     <!-- The buttons -->
-    <div class="row">
-      <div class="col justify-content-center">
+    <div class="row justify-content-center">
+      <div class="col-md-10">
         <!--<button id="buttonFox">Fox</button>
         <button id="buttonSquirrel">Sqiurrel</button>
         <button id="buttonBird">Bird</button>-->
@@ -78,6 +76,7 @@
         <img src="assets/images/mousebutton40x40-02.png" alt="Mouse Button" class="buttonImage" id="buttonMouse">
       </div>
     </div>
+
 
   </div>
 
