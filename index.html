@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/javascript/game.js"></script>
+</head>
+
+<body>
+
+  <!-- Title of the game: row 1 -->
+  <div class="container mybox">
+    <div class="row title">
+      <div class="col-md-12">
+        <h1>Animal Add 'Em Alls</h1>
+      </div>
+    </div>
+
+    <!-- Instructions: row 2 -->
+    <div class="row">
+      <div class="offset-1 col-md-10" id="instructions">
+        <h2>How to Play</h2>
+        <ul>
+          <li>You will be given a random number at the start of each game.</li>
+          <li>You have four furry friends below. When clicked each will add a specific number of points to your score.</li>
+          <li>You win the game if you match your total score to the random number. You lose the game if your total
+            score
+            goes higher than the random number</li>
+          <li>The value held by each animal is hidden until you click on them.</li>
+          <li>At the start of each new game the random number and the animal values change.</li>
+        </ul>
+      </div>
+    </div>
+    <br>
+    <!-- Wins and Losses counter -->
+    <div class="row">
+      <div class="offset-1 col-md-4">
+        <h5>Wins: <span id="winCounter"></span></h5>
+        <h5>Losses: <span id="lossCounter"></span></h5>
+      </div>
+      <!-- message changes on win or lose / play again?-->
+      <div class="col-md-6">
+        <h4 id="message">The animals want to play with you!</h4>
+        <br>
+        <button id="playButton">Play Game!</button>
+      </div>
+    </div>
+    <br>
+    <!-- Generated random number -->
+    <div class="row">
+      <div class="offset-2 col-md-4">
+        <h4>Match this number:</h4>
+        <h2 id="randomNumber"></h2>
+      </div>
+      <!-- User's score (updates with each click) -->
+      <div class="col-md-4">
+        <h4>Your total is:</h4>
+        <h2 id="userTotal"></h2>
+      </div>
+    </div>
+    <br>
+    <!-- The buttons -->
+    <div class="row">
+      <div class="col justify-content-center">
+        <!--<button id="buttonFox">Fox</button>
+        <button id="buttonSquirrel">Sqiurrel</button>
+        <button id="buttonBird">Bird</button>-->
+        <img src="assets/images/squirrelbutton40x40-04.png" alt="Squirrel Button" class="buttonImage" id="buttonSquirrel">
+        <img src="assets/images/foxbutton40x40-01.png" alt="Fox Button" class="buttonImage" id="buttonFox">
+        <img src="assets/images/birdbutton40x40-03.png" alt="Bird Button" class="buttonImage" id="buttonBird">
+        <img src="assets/images/mousebutton40x40-02.png" alt="Mouse Button" class="buttonImage" id="buttonMouse">
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>Animal buttons provided by Kristen Gingras</p>
+  </footer>
+
+</body>
+
+</html>
