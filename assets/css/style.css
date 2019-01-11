@@ -5,6 +5,11 @@ font-family: 'Montserrat', sans-serif;
 body {
   font-family: 'Montserrat', sans-serif;
   background-image: url("../images/green_dust_scratch_@2X.png");
+  margin: auto;
+}
+
+#playButton {
+  margin: auto;
 }
 
 .mybox {
@@ -43,8 +48,13 @@ li {
   padding: 2% 10% 0 10%;
 }
 
+#message {
+  padding: 0.5rem;
+}
+
 .buttonImage {
   cursor: pointer;
+  padding: .5rem;
 }
 
 footer {
